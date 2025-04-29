@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="/">TiTans<span>Blog</span></a>
+        <a className="navbar-brand" href="/">TiTans<span>Blogg</span></a>
         <button
           className="navbar-toggler"
           type="button"
