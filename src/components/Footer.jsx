@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-links">
+        <div className="footer-linksz">
           <div className="footer-link-group">
             <h3>About Us</h3>
             <a href="/about">Our Story</a>
