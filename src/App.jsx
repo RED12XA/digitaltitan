@@ -1,27 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-
-import Home from './pages/Home';
-import Blog from './pages/Blog';
-import Destinations from './pages/Destinations';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Login from './pages/Login';
-import NotFound from './pages/NotFound';
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import CTA from './components/CTA';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/destinations" element={<Destinations />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <Hero />
+      <Features />
+      <CTA />
+      <Footer />
+    </div>
   );
 }
 
