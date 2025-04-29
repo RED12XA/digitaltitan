@@ -17,7 +17,7 @@
 
 /* Logo Styling */
 .custom-navbar .navbar-brand {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
   font-size: 2rem;
   color: #fb8b24;
@@ -31,14 +31,14 @@
 .custom-navbar .navbar-brand #blogcolor {
   color: #fff;
   font-weight: 800;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 2.6rem;
   text-shadow: 2px 2px 5px rgba(255, 136, 0, 0.5);
 }
 
 /* Navigation Links - Base Styling */
 .custom-navbar .nav-link {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: rgb(255, 255, 255);
   font-weight: 400;
   padding: 0.5rem;
@@ -104,7 +104,6 @@
 .custom-navbar .nav-link.home:hover::before,
 .custom-navbar .nav-link.pages:hover::before {
   border-width: 2px;
-
 }
 
 /* Home Link - Travel Themed Icon */
@@ -145,11 +144,11 @@
 
 /* Button Styling */
 .custom-navbar .btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: all 0.4s ease-in-out;
   border-width: 2px;
   border-radius: 50px;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem ;
   font-size: 1rem;
 }
 
