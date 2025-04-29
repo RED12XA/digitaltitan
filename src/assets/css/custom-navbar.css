@@ -1,0 +1,202 @@
+/* 
+  Note: In a Next.js project, you should use next/font instead of @import for fonts
+  and import Bootstrap Icons as a package rather than via CSS import
+*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Orbitron:wght@400;700&display=swap");
+
+/* Main Navbar Styling */
+.custom-navbar {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  padding: 0px 5%;
+  transition: all 0.4s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo Styling */
+.custom-navbar .navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fb8b24;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-navbar .navbar-brand #blogcolor {
+  color: #fff;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  text-shadow: 2px 2px 5px rgba(255, 136, 0, 0.5);
+}
+
+/* Navigation Links - Base Styling */
+.custom-navbar .nav-link {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  padding: 0.5rem;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Navigation Links - Hover Effects */
+.custom-navbar .nav-link:hover {
+  color: #fb8b24;
+}
+
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(90deg, #fb8b24, #e98020);
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 90%;
+}
+
+/* Home and Pages Links - Corner Border Effect */
+.custom-navbar .nav-link.home,
+.custom-navbar .nav-link.pages {
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin: 0 15px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Remove the default underline effect for these specific links */
+.custom-navbar .nav-link.home::after,
+.custom-navbar .nav-link.pages::after {
+  display: none;
+}
+
+/* Corner border effect using pseudo-elements */
+.custom-navbar .nav-link.home::before,
+.custom-navbar .nav-link.pages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0 solid #fb8b24;
+  transition: all 0.4s ease-in-out;
+}
+
+/* On hover, show borders on all corners */
+.custom-navbar .nav-link.home:hover::before,
+.custom-navbar .nav-link.pages:hover::before {
+  border-width: 2px;
+
+}
+
+/* Home Link - Travel Themed Icon */
+.custom-navbar .nav-link.home .icon {
+  font-family: "Bootstrap Icons";
+  font-size: 1.4rem;
+  color: #fb8b24;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link.home .icon::before {
+  content: "\f5fa"; /* Bootstrap 'airplane' icon */
+}
+
+.custom-navbar .nav-link.home:hover .icon {
+  color: #e98020;
+  transform: translateX(3px) rotate(15deg);
+}
+
+/* Pages Link - Travel Themed Icon */
+.custom-navbar .nav-link.pages .icon {
+  font-family: "Bootstrap Icons";
+  font-size: 1.4rem;
+  color: #fb8b24;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link.pages .icon::before {
+  content: "\f5ed"; /* Bootstrap 'map' icon */
+}
+
+.custom-navbar .nav-link.pages:hover .icon {
+  color: #e98020;
+  transform: translateY(-3px);
+}
+
+/* Button Styling */
+.custom-navbar .btn {
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease-in-out;
+  border-width: 2px;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Primary Button */
+.custom-navbar .btn-primary {
+  border-color: #fb8b24;
+  background-color: #fb8b24;
+  box-shadow: 0 4px 15px rgba(251, 139, 36, 0.4);
+}
+
+.custom-navbar .btn-primary:hover {
+  background-color: #e98020;
+  border-color: #e98020;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(251, 139, 36, 0.6);
+}
+
+/* Outline Button */
+.custom-navbar .btn-outline-primary {
+  --bs-btn-border-color: #fb8b24;
+  --bs-btn-color: #fb8b24;
+}
+
+.custom-navbar .btn-outline-primary:hover {
+  background-color: rgba(251, 139, 36, 0.2);
+  color: #fb8b24;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .custom-navbar .navbar-collapse {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+  }
+
+  .custom-navbar .nav-link {
+    padding: 1rem 0;
+  }
+
+  .custom-navbar .nav-link.home,
+  .custom-navbar .nav-link.pages {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .custom-navbar .navbar-nav {
+    gap: 1rem;
+  }
+}
