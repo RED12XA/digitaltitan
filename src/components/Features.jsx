@@ -1,10 +1,11 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Button, Pagination } from 'react-bootstrap';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const features = [
   {
     title: 'Paris, France',
-    description: 'Experience the City of Lights with romantic streets, art museums, and world-famous cuisine.',
+    description: 'Experience the City of Lights with romantic streets, and world-famous cuisine.',
     image: 'https://wildmorocco.com/storage/2024/12/wild-morocco-blog-images-01-400x250.jpg',
   },
   {
@@ -50,30 +51,76 @@ const features = [
 ];
 
 
+
+const ITEMS_PER_PAGE = 6;
+
 const TravelLandingContent = () => {
+  const [liked, setLiked] = useState(Array(features.length).fill(false));
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const toggleLike = (index) => {
+    const updatedLikes = [...liked];
+    updatedLikes[index] = !updatedLikes[index];
+    setLiked(updatedLikes);
+  };
+
+  const totalPages = Math.ceil(features.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentItems = features.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <Container className="my-5">
       <div className="text-center mb-5">
         <h2 className="fw-bold">Your Journey Begins Here</h2>
         <p className="text-muted">
-          Plan your next adventure with us — find your dream destination and book effortlessly.
+          Discover the world’s most beautiful destinations — curated just for you.
         </p>
       </div>
 
       <Row>
-        {features.map((feature, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <Card className="h-100 shadow-sm border-0">
-              <Card.Img variant="top" src={feature.image} alt={feature.title} />
-              <Card.Body>
-                <Card.Title>{feature.title}</Card.Title>
-                <Card.Text>{feature.description}</Card.Text>
-                <Button variant="primary">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
+        {currentItems.map((feature, index) => {
+          const globalIndex = startIndex + index;
+          return (
+            <Col key={globalIndex} md={4} className="mb-4">
+              <Card className="h-100 shadow-sm border-0 position-relative">
+                <Card.Img variant="top" src={feature.image} alt={feature.title} />
+                <Card.Body>
+                  <Card.Title className="d-flex justify-content-between align-items-center">
+                    {feature.title}
+                    <span
+                      onClick={() => toggleLike(globalIndex)}
+                      style={{ cursor: 'pointer', color: liked[globalIndex] ? 'red' : 'gray' }}
+                      title={liked[globalIndex] ? 'Unlike' : 'Like'}
+                    >
+                      {liked[globalIndex] ? <FaHeart /> : <FaRegHeart />}
+                    </span>
+                  </Card.Title>
+                  <Card.Text>{feature.description}</Card.Text>
+                  <Button variant="primary">Learn More</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          );
+        })}
       </Row>
+
+      <div className="d-flex justify-content-center mt-4">
+        <Pagination>
+          {[...Array(totalPages)].map((_, idx) => (
+            <Pagination.Item
+              key={idx}
+              active={idx + 1 === currentPage}
+              onClick={() => handlePageChange(idx + 1)}
+            >
+              {idx + 1}
+            </Pagination.Item>
+          ))}
+        </Pagination>
+      </div>
     </Container>
   );
 };
