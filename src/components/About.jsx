@@ -40,6 +40,7 @@ function About() {
             LinkedIn Profile
           </a>
         </li>
+        
 
         <li>
           <strong>Jane Smith</strong> - Back-End Developer

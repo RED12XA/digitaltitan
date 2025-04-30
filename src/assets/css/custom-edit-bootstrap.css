@@ -376,3 +376,15 @@
   margin-bottom: 0.5rem !important;
   text-transform: capitalize !important;
 }
+.custom-navbar .btn-primary{
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 50px !important;
+}
+.custom-navbar .nav-link{
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 50px !important;
+  color: #ffff !important;
+  font-weight: 500 !important;
+}

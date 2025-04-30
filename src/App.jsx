@@ -16,6 +16,7 @@ import About from './pages/About';
 import AuthForm from './components/AuthForm';
 import Destinations from './components/Destinations';
 import CurrencyModal from './components/CurrencyModal'; // ✅ ADD THIS
+import SingelPage from './components/SingelPage';
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false); // ✅ ADD THIS
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<AuthForm />} />
+          <Route path="/blog" element={<SingelPage />} />
         </Routes>
 
         <Footer />
