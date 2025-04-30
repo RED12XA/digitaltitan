@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 .btn-primary {
   --bs-btn-color: #fff !important;
   --bs-btn-bg: #f97316 !important; /* Orange */
@@ -126,6 +128,7 @@
   );
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 /* Add a futuristic glow effect on hover */
@@ -328,4 +331,48 @@
   transform: scale(2);
   opacity: 1;
   transition: 0s;
+}
+.card-title{
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color:rgb(244, 108, 11) !important;
+  margin-bottom: 0.5rem !important;
+  text-transform: capitalize !important;
+}
+.custom-style-font-xd1{
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  line-height: 1.5 !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  margin-bottom: 1rem !important;
+
+  text-transform: capitalize !important;
+  color:rgb(244, 108, 11) !important;
+}
+.custom-style-font-xd2{
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  color: #333 !important;
+  line-height: 1.5 !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  margin-bottom: 1rem !important;
+  text-transform: capitalize !important;
+}
+.btn-linkedin{
+  background-color: #0077b5 !important; /* LinkedIn Blue */
+  color: white !important;
+  font-weight: bold !important;
+  padding: 12px 30px !important;
+  border-radius: 4px !important;
+  transition: background-color 0.3s, color 0.3s !important;
+  font-size: 1.1rem !important;
+  width: 80% !important;
+}
+#linkedin-title{
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  color: #0077b5 !important; /* LinkedIn Blue */
+  margin-bottom: 0.5rem !important;
+  text-transform: capitalize !important;
 }

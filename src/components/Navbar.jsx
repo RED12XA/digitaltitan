@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "../assets/css/custom-navbar.css"; // Using your existing CSS file with enhancements
 
 function Navbar() {
@@ -12,10 +13,10 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
       <div className="container">
         {/* Logo with travel icon */}
-        <a className="navbar-brand d-flex align-items-center" href="/">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
           <i className="bi bi-airplane-fill me-2 travel-icon"></i>
           TiTans<span id="blogcolor">Travel</span>
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -36,46 +37,45 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
-              {/* Use <Link to="/" className="nav-link">Home</Link> if using React Router */}
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Blog">
+              <Link className="nav-link" to="/blog">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Destinations">
+              <Link className="nav-link" to="/destinations">
                 Destinations
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/About">
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/Contact">
+              <Link className="nav-link" to="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a href="/login">
+              <Link to="/login">
                 <button className="btn btn-outline-primary rounded-pill px-4">
                   Login
                 </button>
-              </a>
+              </Link>
             </li>
             <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a href="/register">
+              <Link to="/register">
                 <button className="btn btn-primary rounded-pill px-4 shadow-sm">
                   Register
                 </button>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

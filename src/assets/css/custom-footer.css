@@ -1,0 +1,101 @@
+.footer {
+    background: #121212; /* Dark background for contrast */
+    color: #f4f4f4; /* Light text color */
+    font-family: 'Roboto', sans-serif;
+    padding: 1.5rem 0;
+  }
+  
+  .footer-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6700; /* Bright orange for the logo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 103, 0, 0.7); /* Orange glow effect */
+  }
+  
+  .footer-tagline {
+    font-size: 1.1rem;
+    color: #a6a6a6;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .footer-link-group {
+    flex: 1;
+    margin: 0 1rem;
+    min-width: 200px; /* Ensures responsiveness */
+  }
+  
+  .footer-link-group h3 {
+    font-size: 1.4rem;
+    color: #ff6700; /* Orange color for section titles */
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .footer-link-group ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-link-group ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-link-group ul li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link-group ul li a:hover {
+    color: #ff6700; /* Orange glow on hover */
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .footer-social a {
+    color: #f4f4f4;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 8px rgba(255, 103, 0, 0.6); /* Soft glow effect for icons */
+  }
+  
+  .footer-social a:hover {
+    color: #ff6700; /* Orange glow on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-bottom a {
+    text-decoration: none;
+    color: #ff6700; /* Orange color for links */
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  

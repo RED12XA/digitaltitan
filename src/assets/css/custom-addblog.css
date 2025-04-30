@@ -1,0 +1,61 @@
+/* Custom Styles for AddBlog */
+.custom-card {
+  background: linear-gradient(135deg, rgba(255, 185, 76, 0.1), rgba(144, 198, 255, 0.2));
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out;
+  width: 80% !important; /* Ensures the card takes 80% of the width */
+  margin: 0 auto; /* Centers the card */
+}
+
+.custom-card:hover {
+  transform: translateY(-10px); /* Adds a subtle lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #f7a50e, #59a6ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.custom-btn-outline {
+  background-color: transparent;
+  border-color: #59a6ff;
+  color: #59a6ff;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.1rem;
+}
+
+.custom-btn-outline:hover {
+  background-color: #59a6ff;
+  color: white;
+}
+
+.custom-btn-primary {
+  background-color: #f7a50e;
+  border-color: #f7a50e;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.1rem;
+}
+
+.custom-btn-primary:hover {
+  background-color: #ff9c00;
+  color: white;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
