@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './assets/css/custom-edit-bootstrap.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';

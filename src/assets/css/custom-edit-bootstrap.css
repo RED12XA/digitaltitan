@@ -1,0 +1,331 @@
+.btn-primary {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #f97316 !important; /* Orange */
+  --bs-btn-border-color: #f97316 !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #ea580c !important; /* Darker orange on hover */
+  --bs-btn-hover-border-color: #ea580c !important;
+  --bs-btn-focus-shadow-rgb: 249, 115, 22 !important;
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: #c2410c !important;
+  --bs-btn-active-border-color: #c2410c !important;
+  --bs-btn-disabled-color: #fff !important;
+  --bs-btn-disabled-bg: #f97316 !important;
+  --bs-btn-disabled-border-color: #f97316 !important;
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2) !important;
+}
+
+.btn {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-radius: 50px !important;
+  padding: 12px 30px !important;
+  font-size: 1rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+
+/* Button Hover Animation */
+.btn-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 15px rgba(249, 115, 22, 0.3) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(1px) !important;
+}
+
+/* Pulse Effect for CTA Buttons */
+.btn-cta {
+  animation: pulse 2s infinite !important;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+}
+
+/* Ripple Effect on Click */
+.btn::after {
+  content: "" !important;
+  position: absolute !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  width: 100px !important;
+  height: 100px !important;
+  margin-top: -50px !important;
+  margin-left: -50px !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: scale(0) !important;
+  opacity: 0 !important;
+  transition: transform 0.5s, opacity 0.5s !important;
+}
+
+.btn:active::after {
+  transform: scale(2) !important;
+  opacity: 0 !important;
+  transition: 0s !important;
+}
+
+/* Read More Link Animation */
+.read-more {
+  color: #f97316 !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+.read-more::after {
+  content: "→" !important;
+  position: relative !important;
+  opacity: 0 !important;
+  top: 0 !important;
+  right: -8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.read-more:hover::after {
+  opacity: 1 !important;
+  right: -15px !important;
+}
+
+/* Fade-in animation for content blocks */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Base card styling */
+.custom-card-a {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.6)
+  );
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Add a futuristic glow effect on hover */
+.custom-card-a:hover {
+  z-index: 99;
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 88, 139, 0.2),
+    0 0 15px rgba(66, 220, 255, 0.2);
+  border-color: rgba(120, 220, 255, 0.5);
+}
+
+/* Add subtle highlight effect */
+.custom-card-a::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: transform 0.7s;
+}
+
+.custom-card-a:hover::after {
+  transform: rotate(30deg) translateX(300%);
+}
+
+/* Style for card body */
+.card-body {
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.custom-card-a:hover .card-body {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(235, 250, 255, 0.8)
+  );
+}
+
+/* Style for card images */
+.custom-card-a img {
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+
+.custom-card-a:hover img {
+  transform: scale(1.08);
+  filter: saturate(1.2) contrast(1.1);
+}
+
+/* Style for card titles */
+.custom-card-a h3,
+.custom-card-a .card-title {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.custom-card-a:hover h3,
+.custom-card-a:hover .card-title {
+  color: #0078a8;
+  transform: translateX(5px);
+}
+
+/* Add a subtle underline effect for titles */
+.custom-card-a:hover h3::after,
+.custom-card-a:hover .card-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #0094c6, transparent);
+}
+#count-likes {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin: 0.1;
+  display: inline-block;
+  border-radius: 8px;
+  color: #333;
+}
+
+.pagination {
+  /* Base variables */
+  --pagination-font-size: 0.95rem;
+  --pagination-font-weight: 500;
+  --pagination-spacing: 0.5rem;
+  --pagination-color: #565b73;
+  --pagination-bg: transparent;
+  --pagination-border-width: 0;
+  --pagination-border-radius: 8px;
+  --pagination-transition: all 0.3s ease;
+
+  /* Hover state */
+  --pagination-hover-color: #f97316;
+  --pagination-hover-bg: rgba(58, 134, 255, 0.08);
+
+  /* Active state */
+  --pagination-active-color: #fff;
+  --pagination-active-bg: #f97316;
+  --pagination-active-box-shadow: 0 4px 12px rgba(58, 134, 255, 0.25);
+
+  /* Disabled state */
+  --pagination-disabled-color: #c0c3cc;
+  --pagination-disabled-bg: transparent;
+
+  /* Layout properties */
+  display: flex;
+  gap: 0.35rem;
+  padding: var(--pagination-spacing);
+  list-style: none;
+  justify-content: center;
+  font-family: inherit;
+}
+
+.pagination .page-item {
+  margin: 0;
+}
+
+.pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.5rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  font-size: var(--pagination-font-size);
+  font-weight: var(--pagination-font-weight);
+  color: var(--pagination-color);
+  background-color: var(--pagination-bg);
+  border: var(--pagination-border-width) solid transparent;
+  border-radius: var(--pagination-border-radius);
+  transition: var(--pagination-transition);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.pagination .page-link:hover {
+  color: var(--pagination-hover-color);
+  background-color: var(--pagination-hover-bg);
+  transform: translateY(-2px);
+}
+
+/* Active state */
+.pagination .page-item.active .page-link {
+  color: var(--pagination-active-color);
+  background-color: var(--pagination-active-bg);
+  box-shadow: var(--pagination-active-box-shadow);
+  z-index: 2;
+}
+
+/* Disabled state */
+.pagination .page-item.disabled .page-link {
+  color: var(--pagination-disabled-color);
+  background-color: var(--pagination-disabled-bg);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Icon styles for next/prev */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+  font-size: 1.1rem;
+}
+
+/* Hide the number 1 and last number on mobile */
+@media (max-width: 576px) {
+  .pagination
+    .page-item:not(:first-child):not(:last-child):not(.active):not(.disabled) {
+    display: none;
+  }
+
+  .pagination .page-item.active {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Add subtle ripple effect on click */
+.pagination .page-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.pagination .page-link:active::after {
+  transform: scale(2);
+  opacity: 1;
+  transition: 0s;
+}

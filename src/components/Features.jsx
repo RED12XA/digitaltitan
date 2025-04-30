@@ -7,36 +7,43 @@ const features = [
     title: 'Paris, France',
     description: 'Experience the City of Lights with romantic streets, and world-famous cuisine.',
     image: 'https://wildmorocco.com/storage/2024/12/wild-morocco-blog-images-01-400x250.jpg',
+    nbLike: '24',
   },
   {
     title: 'Safari Adventure, Kenya',
     description: 'Witness the majestic wildlife of Africa on a guided safari through Kenya’s national parks.',
     image: 'https://liveworkplaytravel.com/wp-content/uploads/2022/05/SoloTravellerFemale-400x250.jpg',
+    nbLike: '24',
   },
   {
     title: 'Tokyo, Japan',
     description: 'Dive into a futuristic city with ancient temples, neon streets, and exquisite sushi.',
     image: 'https://fairfieldcountylook.com/wp-content/uploads/2024/09/iStock-467903903-400x250.jpg',
+    nbLike: '24',
   },
   {
     title: 'Bali, Indonesia',
     description: 'Relax on tropical beaches, explore temples, and rejuvenate with yoga retreats in paradise.',
     image: 'https://wildmorocco.com/storage/2024/12/wild-morocco-blog-images-01-400x250.jpg',
+    nbLike: '24',
   },
   {
     title: 'Iceland Adventure',
     description: 'Explore glaciers, volcanoes, and the magical Northern Lights in a land of fire and ice.',
     image: 'https://liveworkplaytravel.com/wp-content/uploads/2022/05/SoloTravellerFemale-400x250.jpg',
+    nbLike: '24',
   },
   {
     title: 'New York City, USA',
     description: 'Take in Broadway shows, iconic landmarks, and a skyline that never sleeps.',
     image: 'https://fairfieldcountylook.com/wp-content/uploads/2024/09/iStock-467903903-400x250.jpg',
+    nbLike: '24',
   },
   {
     title: 'Santorini, Greece',
     description: 'Stroll whitewashed villages, stunning sunsets, and cliffside views of the Aegean Sea.',
     image: 'https://wildmorocco.com/storage/2024/12/wild-morocco-blog-images-01-400x250.jpg',
+    nbLike: '24',
   },
   {
     title: 'Amazon Rainforest, Brazil',
@@ -47,6 +54,7 @@ const features = [
     title: 'Swiss Alps, Switzerland',
     description: 'Ski the snowy peaks, hike pristine trails, and take in breathtaking alpine vistas.',
     image: 'https://fairfieldcountylook.com/wp-content/uploads/2024/09/iStock-467903903-400x250.jpg',
+    nbLike: '24',
   },
 ];
 
@@ -85,7 +93,7 @@ const TravelLandingContent = () => {
         {currentItems.map((feature, index) => {
           const globalIndex = startIndex + index;
           return (
-            <Col key={globalIndex} md={4} className="mb-4">
+            <Col key={globalIndex} md={4} className="mb-4 custom-card-a">
               <Card className="h-100 shadow-sm border-0 position-relative">
                 <Card.Img variant="top" src={feature.image} alt={feature.title} />
                 <Card.Body>
@@ -97,7 +105,10 @@ const TravelLandingContent = () => {
                       title={liked[globalIndex] ? 'Unlike' : 'Like'}
                     >
                       {liked[globalIndex] ? <FaHeart /> : <FaRegHeart />}
+
+                      <span id="count-likes"> {feature.nbLike}</span>
                     </span>
+
                   </Card.Title>
                   <Card.Text>{feature.description}</Card.Text>
                   <Button variant="primary">Learn More</Button>
