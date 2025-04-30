@@ -86,7 +86,7 @@
   text-shadow: 0 0 8px rgba(255, 126, 0, 0.3);
 }
 
-/* Ultra-modern form inputs */
+/* Ultra-modern form inputs */.modal-overlay 
 .form-control, .form-select {
   border: 1px solid rgba(255, 126, 0, 0.3);
   border-radius: 12px;
@@ -104,7 +104,7 @@
 }
 
 /* Clean, organized select styling */
-.form-select {
+.modal-overlay .form-select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ff7e00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 15px center;
@@ -113,7 +113,7 @@
 }
 
 /* Style the select options */
-.form-select option {
+.modal-overlay .form-select option {
   background-color: #ffffff;
   color: #333;
   padding: 10px;
@@ -121,14 +121,14 @@
   font-weight: 500;
 }
 
-.form-control:focus, .form-select:focus {
+.modal-overlay .form-control:focus, .form-select:focus {
   border-color: #ff7e00;
   box-shadow: 0 0 0 2px rgba(255, 126, 0, 0.25), inset 0 1px 4px rgba(0, 0, 0, 0.1);
   outline: none;
 }
 
 /* Sleek form labels */
-.form-label {
+.modal-overlay .form-label {
   font-weight: 600;
   color: #ff9b50;
   font-size: 0.9rem;
@@ -140,7 +140,7 @@
 }
 
 /* Futuristic result display */
-h6.fw-bold {
+.modal-overlay h6.fw-bold {
   font-size: 1.5rem;
   color: #333;
   padding: 18px 15px;
@@ -156,7 +156,7 @@ h6.fw-bold {
 }
 
 /* Add subtle animation to result */
-h6.fw-bold::after {
+.modal-overlay h6.fw-bold::after {
   content: '';
   position: absolute;
   top: 0;
@@ -172,7 +172,7 @@ h6.fw-bold::after {
 }
 
 /* Advanced loading animation */
-.text-primary {
+.modal-overlay .text-primary {
   color: #ff7e00;
   padding: 18px;
   text-align: center;
@@ -183,7 +183,7 @@ h6.fw-bold::after {
   gap: 10px;
 }
 
-.text-primary::before {
+.modal-overlay .text-primary::before {
   content: '';
   width: 18px;
   height: 18px;
@@ -209,7 +209,7 @@ h6.fw-bold::after {
   z-index: 1;
 }
 
-.btn-secondary {
+.modal-overlay .btn-secondary {
   background: linear-gradient(135deg, #ff7e00, #ff5900);
   border: none;
   color: white;
@@ -228,16 +228,16 @@ h6.fw-bold::after {
   z-index: -1;
 }
 
-.btn-secondary:hover {
+.modal-overlay .btn-secondary:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 10px 20px rgba(255, 126, 0, 0.4);
 }
 
-.btn-secondary:hover::before {
+.modal-overlay .btn-secondary:hover::before {
   left: 100%;
 }
 
-.btn-close {
+.modal-overlay .btn-close {
   background: transparent;
   border: none;
   color: rgba(255, 255, 255, 0.7);
@@ -253,14 +253,14 @@ h6.fw-bold::after {
   justify-content: center;
 }
 
-.btn-close:hover {
+.modal-overlay .btn-close:hover {
   background-color: rgba(255, 126, 0, 0.2);
   color: #ffffff;
   transform: rotate(90deg);
 }
 
 /* Row and column layout with improved spacing */
-.row {
+.modal-overlay .row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -268,7 +268,7 @@ h6.fw-bold::after {
   gap: 5px;
 }
 
-.col-md-6 {
+.modal-overlay .col-md-6 {
   flex: 0 0 calc(50% - 5px);
   max-width: calc(50% - 5px);
   padding-right: 12px;
@@ -294,37 +294,37 @@ h6.fw-bold::after {
 }
 
 /* Improved spacing */
-.p-4 {
+.modal-overlay .p-4 {
   padding: 28px;
 }
 
-.mb-3 {
+.modal-overlay .mb-3 {
   margin-bottom: 20px;
 }
 
-.mt-4 {
+.modal-overlay .mt-4 {
   margin-top: 28px;
 }
 
-.text-end {
+.modal-overlay .text-end {
   text-align: right;
 }
 
 /* Layout utilities */
-.d-flex {
+.modal-overlay .d-flex {
   display: flex;
 }
 
-.justify-content-between {
+.modal-overlay .justify-content-between {
   justify-content: space-between;
 }
 
-.align-items-center {
+.modal-overlay .align-items-center {
   align-items: center;
 }
 
 /* Currency code highlighting */
-h6.fw-bold span:first-of-type,
+.modal-overlay h6.fw-bold span:first-of-type,
 h6.fw-bold span:last-of-type {
   color: #ff7e00;
   font-weight: 800;
