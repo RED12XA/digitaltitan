@@ -1,27 +1,31 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Using actual travel destination images
 const destinations = [
-  { 
-    title: 'Africa', 
-    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    location: 'Serengeti National Park' 
+  {
+    title: "Africa",
+    image:
+      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    location: "Serengeti National Park",
   },
-  { 
-    title: 'Europe', 
-    image: 'https://images.unsplash.com/photo-1499856871958-5b9357976b82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    location: 'Santorini, Greece' 
+  {
+    title: "Europe",
+    image:
+      "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    location: "Santorini, Greece",
   },
-  { 
-    title: 'Asia', 
-    image: 'https://images.unsplash.com/photo-1535139262971-c51845709a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    location: 'Bali, Indonesia' 
+  {
+    title: "Asia",
+    image:
+      "https://images.unsplash.com/photo-1535139262971-c51845709a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    location: "Bali, Indonesia",
   },
-  { 
-    title: 'America', 
-    image: 'https://images.unsplash.com/photo-1480497490787-505ec076689f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-    location: 'Grand Canyon, USA' 
+  {
+    title: "America",
+    image:
+      "https://images.unsplash.com/photo-1480497490787-505ec076689f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    location: "Grand Canyon, USA",
   },
 ];
 
@@ -30,12 +34,16 @@ function Destinations() {
     <div className="container py-5 position-relative">
       {/* Curved travel path background elements */}
       <div className="travel-path-container">
-        <svg className="travel-path-svg" viewBox="0 0 1200 300" preserveAspectRatio="none">
-          <path 
-            className="travel-path-line" 
-            d="M0,150 C200,50 400,250 600,100 C800,0 1000,200 1200,100" 
-            strokeWidth="3" 
-            fill="none" 
+        <svg
+          className="travel-path-svg"
+          viewBox="0 0 1200 300"
+          preserveAspectRatio="none"
+        >
+          <path
+            className="travel-path-line"
+            d="M0,150 C200,50 400,250 600,100 C800,0 1000,200 1200,100"
+            strokeWidth="3"
+            fill="none"
             strokeDasharray="10, 10"
           />
           <circle className="circle-marker" cx="150" cy="120" r="8" />
@@ -43,35 +51,40 @@ function Destinations() {
           <circle className="circle-marker" cx="650" cy="80" r="8" />
           <circle className="circle-marker" cx="900" cy="30" r="8" />
           <circle className="circle-marker" cx="1100" cy="140" r="8" />
-          
+
           {/* Directional arrow */}
-          <path 
-            className="travel-arrow" 
-            d="M1100,100 L1130,90 L1120,110 Z" 
+          <path
+            className="travel-arrow"
+            d="M1100,100 L1130,90 L1120,110 Z"
             fill="#FF8008"
           />
         </svg>
-        
+
         {/* Airplane icon moving along the path */}
         <div className="airplane-icon">✈️</div>
       </div>
-      
+
       {/* Clean, organized header section */}
       <div className="">
         <h2 className="custom-style-font-xd1">Top Destinations</h2>
         <div className="divider mx-auto mb-4"></div>
-        <p className="custom-style-font-xd2" style={{ maxWidth: '700px' }}>
-          Discover extraordinary places around the world and plan your next unforgettable journey
+        <p className="custom-style-font-xd2" style={{ maxWidth: "700px" }}>
+          Discover extraordinary places around the world and plan your next
+          unforgettable journey
         </p>
       </div>
-      
+
       {/* Clean card grid with consistent spacing */}
       <div className="row g-4">
         {destinations.map((dest, idx) => (
           <div className="col-md-6 col-lg-3" key={idx}>
             <div className="card h-100 border-0 destination-card">
               <div className="img-container">
-                <img src={dest.image || `/api/placeholder/400/320`} className="card-img-top" alt={dest.title} />
+                <img
+                  src={dest.image || `/api/placeholder/400/320`}
+                  className="card-img-top"
+                  alt={dest.title}
+                />
                 <div className="overlay">
                   <button className="btn btn-sm explore-btn">Explore</button>
                 </div>
@@ -89,7 +102,7 @@ function Destinations() {
           </div>
         ))}
       </div>
-      
+
       {/* Clean, centered action button */}
       <div className="text-center mt-5">
         <button className="btn primary-btn px-4 py-2">
