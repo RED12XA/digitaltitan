@@ -1,33 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// Import Bootstrap CSS and custom styles
+// Bootstrap and CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './assets/css/custom-edit-bootstrap.css';
 import './assets/css/custom-navbar.css';
 import './assets/css/custom-footer.css';
 
-import Navbar from './components/Navbar'; // Import Navbar component
-import Hero from './components/Hero'; // Import Hero component
-import Features from './components/Features'; // Import Features component
-import Footer from './components/Footer'; // Import Footer component
-import Home from './pages/Home'; // Assuming you created a Home page component for the landing page
-import About from './pages/About'; // Your About page (this should match the route path)
+// Components
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import AuthForm from './components/AuthForm';
+import Destinations from './components/Destinations';
+import CurrencyModal from './components/CurrencyModal'; // ✅ ADD THIS
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false); // ✅ ADD THIS
+
   return (
     <Router>
       <div className="App">
-        <Navbar /> {/* Navbar will always be rendered */}
-        
-        {/* Define your routes here */}
+        <Navbar setModalOpen={setModalOpen} /> {/* ✅ PASS PROP */}
+
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Default route for Home */}
-          <Route path="/about" element={<About />} /> {/* About page route */}
-          {/* Add more routes for other pages as needed */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<AuthForm />} />
         </Routes>
 
-        <Footer /> {/* Footer section */}
+        <Footer />
+        {modalOpen && <CurrencyModal onClose={() => setModalOpen(false)} />}
       </div>
     </Router>
   );

@@ -91,7 +91,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Wanderly. Adventure awaits.</p>
+          <p>© {new Date().getFullYear()} TiTans Travel. Adventure awaits.</p>
           <p>
             <a href="/privacy">Privacy Policy</a> |{" "}
             <a href="/terms">Terms of Use</a>
