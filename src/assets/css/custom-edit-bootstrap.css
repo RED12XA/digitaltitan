@@ -131,7 +131,7 @@
 /* Add a futuristic glow effect on hover */
 .custom-card-a:hover {
   z-index: 99;
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-1px) scale(1.001);
   box-shadow: 0 15px 30px rgba(0, 88, 139, 0.2),
     0 0 15px rgba(66, 220, 255, 0.2);
   border-color: rgba(120, 220, 255, 0.5);
